@@ -1,0 +1,59 @@
+.contact {
+    .title::after {
+        content: "get in touch";
+    }
+
+    .primary-btn {
+        padding: 0;
+        height: 45px;
+        width: 100%;
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    .icons {
+
+        i {
+            font-size: 25px;
+            color: #4b9cd3;
+        }
+    }
+
+    .sub-title {
+        color: #333333;
+        font-size: 18px;
+    }
+
+    form {
+
+        .field {
+            height: 45px;
+
+            input {
+                height: 100%;
+                width: 100%;
+                border: 1px solid lightgrey;
+                border-radius: 6px;
+                outline: none;
+                padding: 0 15px;
+                font-size: 17px;
+                font-family: "Poppins", sans-serif;
+                transition: all 0.3s ease;
+            }
+        }
+
+        textarea {
+            resize: none;
+            height: 100%;
+            width: 100%;
+            border: 1px solid lightgrey;
+            border-radius: 6px;
+            outline: none;
+            padding: 10px 15px 0;
+            font-size: 17px;
+            font-family: "Poppins", sans-serif;
+            transition: all 0.3s ease;
+        }
+
+    }
+}

@@ -1,0 +1,82 @@
+/* skills section */
+
+.skills {
+    font-family: "Ubuntu", sans-serif;
+
+    .title::after {
+        content: "what i know";
+    }
+
+    .skills-content {
+        .info {
+            margin-bottom: 6px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            span {
+                color: #333333;
+                font-size: 18px;
+                font-weight: 500;
+            }
+        }
+
+        .line {
+            height: 5px;
+            width: 100%;
+            background: lightgrey;
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                height: 100%;
+                left: 0;
+                top: 0;
+                background: #4b9cd3;
+            }
+        }
+
+        .html::before {
+            width: 95%;
+        }
+
+        .css::before {
+            width: 95%;
+        }
+
+        .js::before {
+            width: 90%;
+        }
+
+        .angular::before {
+            width: 90%;
+        }
+
+        .nodejs::before {
+            width: 85%;
+        }
+
+        .nestjs::before {
+            width: 90%;
+        }
+
+        .mysql::before {
+            width: 90%;
+        }
+
+        .mongodb::before {
+            width: 90%;
+        }
+
+        .tailwind::before {
+            width: 95%;
+        }
+
+        .bootstrap::before {
+            width: 95%;
+        }
+
+    }
+
+}
