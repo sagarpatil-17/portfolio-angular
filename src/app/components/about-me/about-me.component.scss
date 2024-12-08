@@ -1,0 +1,23 @@
+.profile {
+
+    img {
+        width: 360px;
+    }
+}
+
+.social-media {
+
+    img {
+
+        &:hover {
+            filter: brightness(80%);
+        }
+    }
+
+}
+
+@media (max-width: 690px) {
+    .profile {
+        margin: auto;
+    }
+}
