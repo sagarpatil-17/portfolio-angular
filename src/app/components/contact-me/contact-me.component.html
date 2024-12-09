@@ -1,3 +1,5 @@
+<app-loader *ngIf="isLoading"></app-loader>
+
 <!-- contact section -->
 <section class="contact" id="contact">
     <div class="max-width">
@@ -49,7 +51,7 @@
                         <textarea name="message" rows="4" placeholder="Message.." formControlName="message"></textarea>
                     </div>
                     <div>
-                        <button class="primary-btn" type="submit" (click)="sendEmail()">Send message</button>
+                        <button class="primary-btn" type="submit" (click)="sendEmail()" [disabled]="isLoading">Send message</button>
                     </div>
                 </form>
             </div>
