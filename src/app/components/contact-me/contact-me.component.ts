@@ -2,15 +2,18 @@ import { Component } from '@angular/core';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import Swal from 'sweetalert2';
 import { ContactService } from '../../services/contact.service';
+import { LoaderComponent } from '../loader/loader.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-contact-me',
-  imports: [FormsModule, ReactiveFormsModule],
+  imports: [CommonModule, FormsModule, ReactiveFormsModule, LoaderComponent],
   templateUrl: './contact-me.component.html',
   styleUrl: './contact-me.component.scss',
 })
 export class ContactMeComponent {
 
+  public isLoading: boolean = false;
   constructor(private _contactService: ContactService) { }
 
   contactForm = new FormGroup({
@@ -30,12 +33,16 @@ export class ContactMeComponent {
         message: contactForm.message
       }
 
+      this.isLoading = true;
       this._contactService.sendEmail(emailInfo).subscribe((res: any) => {
         // console.log(res)
+        this.isLoading = false;
         Swal.fire({
           icon: 'success',
           title: 'Message sent successfully!'
         });
+      }, () => {
+        this.isLoading = false;
       })
 
     } else {
