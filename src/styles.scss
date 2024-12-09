@@ -18,6 +18,24 @@ html {
     line-height: 1.15;
 }
 
+// sweet alert
+.swal2-popup {
+    font-family: 'Mulish', sans-serif;
+    font-size: 18px;
+    border-radius: 10px;
+}
+
+.swal2-title {
+    font-size: 1.6em !important;
+}
+
+.swal2-confirm {
+    background-color: #4b9cd3 !important;
+    color: white !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
 /* custom scroll bar */
 ::-webkit-scrollbar {
     width: 10px;

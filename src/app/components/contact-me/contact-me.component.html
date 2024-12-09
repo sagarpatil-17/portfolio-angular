@@ -33,23 +33,23 @@
 
             <div class="flex flex-col gap-3">
                 <div class="text-xl font-semibold">Message me</div>
-                <form class="flex flex-col gap-4 w-full">
+                <form class="flex flex-col gap-4 w-full" [formGroup]="contactForm">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div class="field">
-                            <input type="text" name="name" placeholder="Name" required>
+                            <input type="text" name="name" placeholder="Name" formControlName="user_name">
                         </div>
                         <div class="field">
-                            <input type="email" name="email" placeholder="Email" required>
+                            <input type="email" name="email" placeholder="Email" formControlName="user_email">
                         </div>
                     </div>
                     <div class="field">
-                        <input type="text" name="Subject" placeholder="Subject" required>
+                        <input type="text" name="Subject" placeholder="Subject" formControlName="subject">
                     </div>
                     <div>
-                        <textarea name="message" rows="4" placeholder="Message.." required></textarea>
+                        <textarea name="message" rows="4" placeholder="Message.." formControlName="message"></textarea>
                     </div>
                     <div>
-                        <button class="primary-btn" type="submit">Send message</button>
+                        <button class="primary-btn" type="submit" (click)="sendEmail()">Send message</button>
                     </div>
                 </form>
             </div>
