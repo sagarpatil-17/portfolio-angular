@@ -6,6 +6,7 @@ import { ContactMeComponent } from '../contact-me/contact-me.component';
 import { MyServicesComponent } from '../my-services/my-services.component';
 import { MySkillsComponent } from '../my-skills/my-skills.component';
 import { MyProjectsComponent } from '../my-projects/my-projects.component';
+import { TestService } from '../../services/test.service';
 
 @Component({
   selector: 'app-content-layout',
@@ -15,7 +16,7 @@ import { MyProjectsComponent } from '../my-projects/my-projects.component';
 })
 export class ContentLayoutComponent {
 
-  constructor() { }
+  constructor(private _testService: TestService) { }
 
   ngOnInit(): void {
     // Typing text animation initialization
@@ -25,6 +26,11 @@ export class ContentLayoutComponent {
       backSpeed: 60,
       loop: true,
     });
+    this.testApi();
+  }
+
+  private testApi() {
+    this._testService.testApi().subscribe(() => { })
   }
 
 }
