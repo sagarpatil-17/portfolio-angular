@@ -14,7 +14,6 @@ export class AllProjectsComponent {
     { image: '/assets/images/gallery-web.png', title: 'Image gallery web', tools: 'Angular 16, Bootstrap', link: 'https://snapify-cyan.vercel.app/' },
     { image: '', title: 'Music web app', tools: 'Angular 14, Bootstrap', link: 'https://sagarpatil-17.github.io/freshmusic/' },
     { image: '', title: 'Responsive nav & hero', tools: 'Angular 16, Tailwind', link: 'https://responsive-nav-hero.vercel.app/' },
-    // { image: '', title: 'Music web app', tools: 'Angular 14, Bootstrap', link: 'https://sagarpatil-17.github.io/freshmusic/' },
   ]
 
 }

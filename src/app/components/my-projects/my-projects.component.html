@@ -1,5 +1,5 @@
 <!-- projects section -->
-<section class="projects" id="projects">
+<section #projectsSection class="projects" id="projects">
     <div class="max-width">
         <h2 class="title">My Recent Work</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -21,7 +21,10 @@
             </div>
         </div>
         <div class="mt-14 flex">
-            <button routerLink="/all-projects" class="primary-btn m-auto" style="padding: 8px 24px;">See All Projects</button>
+            <a (click)="viewAll()" class="primary-btn m-auto" style="padding: 8px 24px; cursor: pointer;">
+                {{ isViewAll ? 'Show Less Projects' : 'See All Projects' }}
+            </a>
+            <!-- <button routerLink="/all-projects" class="primary-btn m-auto" style="padding: 8px 24px;">See All Projects</button> -->
         </div>
     </div>
 </section>
