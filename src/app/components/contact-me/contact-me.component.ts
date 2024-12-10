@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import Swal from 'sweetalert2';
 import { ContactService } from '../../services/contact.service';
 import { LoaderComponent } from '../loader/loader.component';
@@ -17,10 +17,10 @@ export class ContactMeComponent {
   constructor(private _contactService: ContactService) { }
 
   contactForm = new FormGroup({
-    user_name: new FormControl(''),
-    user_email: new FormControl(''),
-    subject: new FormControl(''),
-    message: new FormControl('')
+    user_name: new FormControl('', Validators.required),
+    user_email: new FormControl('', Validators.required),
+    subject: new FormControl('', Validators.required),
+    message: new FormControl('', Validators.required)
   })
 
   public sendEmail() {
