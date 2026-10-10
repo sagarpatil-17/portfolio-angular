@@ -21,10 +21,16 @@ export class ContentLayoutComponent {
   ngOnInit(): void {
     // Typing text animation initialization
     new Typed('.typing', {
-      strings: ['Designer', 'Developer', 'Freelancer'],
-      typeSpeed: 100,
-      backSpeed: 60,
-      loop: true,
+      strings: [
+        'Full Stack Developer',
+        'Angular Developer',
+        'React Developer',
+        'Backend Developer'
+      ],
+      typeSpeed: 70,
+      backSpeed: 40,
+      backDelay: 1500,
+      loop: true
     });
     this.testApi();
   }
