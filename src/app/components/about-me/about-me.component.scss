@@ -1,23 +1,28 @@
-.profile {
-
-    img {
-        width: 360px;
-    }
+.social-links {
+    display: flex;
+    align-items: center;
+    gap: 22px;
 }
 
-.social-media {
-
-    img {
-
-        &:hover {
-            filter: brightness(80%);
-        }
-    }
-
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    color: #6b7280;
+    font-size: 24px;
+    text-decoration: none;
+    transition: color 0.2s ease, transform 0.2s ease;
 }
 
-@media (max-width: 690px) {
-    .profile {
-        margin: auto;
-    }
+.social-icon:hover {
+    color: #2563eb;
+    transform: translateY(-3px);
+}
+
+.social-icon:focus-visible {
+    outline: 2px solid #2563eb;
+    outline-offset: 3px;
+    border-radius: 4px;
 }
