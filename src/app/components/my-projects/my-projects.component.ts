@@ -19,6 +19,8 @@ export class MyProjectsComponent {
   ];
 
   private allProjects: Array<any> = [
+    { image: '/assets/images/snapurl.png', title: 'SnapURL', tools: 'Angular 22, Tailwind, Node.js, Express.js, MongoDB', link: 'https://snapurl.vercel.app/' },
+    { image: '/assets/images/medivoice-ai.png', title: 'MediVoice AI', tools: 'Angular 22, Tailwind, Node.js, NestJs, MongoDB, Prisma ORM, JWT Authentication, OAuth 2.0, REST APIs', link: 'https://medivoice-ai-live.vercel.app/' },
     { image: '/assets/images/gym-web.jpg', title: 'Gym web app', tools: 'Angular 19, Tailwind', link: 'https://fitnessclub-project.web.app/' },
     { image: '/assets/images/gallery-web.png', title: 'Image gallery web', tools: 'Angular 16, Bootstrap', link: 'https://snapify-live.vercel.app/' },
     { image: '/assets/images/responsive-web.png', title: 'Responsive nav & hero', tools: 'Angular 16, Tailwind', link: 'https://responsive-nav-hero.vercel.app/' },
